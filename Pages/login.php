@@ -5,6 +5,11 @@
         $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
 
+        // echo $usuario;
+        // echo $senha;
+
+        // print_r($_POST);
+
         $sql = "select * from usuario where Email_Usuario = '$usuario'";
         $result = $conexao->query($sql);
 
@@ -41,12 +46,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
     <form method="POST">
         <input type="text" placeholder="Digite seu email" name="usuario">
         <input type="password" placeholder="Digite sua senha" name="senha">
         <input type="submit" value="Entrar">
+        <a href="cadastro.php">Não possui conta? Clique aqui!</a>
 
     </form>
 
