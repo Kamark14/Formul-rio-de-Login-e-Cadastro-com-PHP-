@@ -5,11 +5,6 @@
         $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
 
-        // echo $usuario;
-        // echo $senha;
-
-        // print_r($_POST);
-
         $sql = "select * from usuario where Email_Usuario = '$usuario'";
         $result = $conexao->query($sql);
 
